@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore career opportunities at Prairie Management &amp; Development, Inc. We are always looking for talented individuals to join our mission-driven team.">
+    <title>Careers – Prairie Management &amp; Development, Inc.</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <span class="logo">Prairie Management &amp; Development, Inc.</span>
+            <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect y="5" width="24" height="2"></rect>
+                    <rect y="11" width="24" height="2"></rect>
+                    <rect y="17" width="24" height="2"></rect>
+                </svg>
+            </button>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="careers.html" class="active">Careers</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="careers.html" class="active">Careers</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    <!-- Content -->
+    <main class="pt-nav">
+        <section class="section">
+            <div class="container grid grid-2">
+                <div>
+                    <h1>Careers</h1>
+                    <p>Come work with us! We are always looking for the right people to join our team and help us deliver exceptional experiences to our communities. Below are some of the roles we frequently hire for. If you do not see a position that fits your background, feel free to send us your résumé and we will keep it on file for future opportunities.</p>
+                    <ul style="list-style: none; padding-left: 0; margin-top: 1rem;">
+                        <li class="mb-6">
+                            <h3 style="margin: 0 0 0.25rem 0; font-size: 1.25rem; font-weight: 600; color: #1e40af;">Property Area Manager – Chicago, IL</h3>
+                            <p style="margin: 0; color: #4b5563;">Provide leadership and oversight across multiple properties, ensuring operational excellence and resident satisfaction.</p>
+                        </li>
+                        <li class="mb-6">
+                            <h3 style="margin: 0 0 0.25rem 0; font-size: 1.25rem; font-weight: 600; color: #1e40af;">Property Manager – Lincoln Park, IL</h3>
+                            <p style="margin: 0; color: #4b5563;">Manage day-to-day operations of residential communities, coordinate maintenance and support resident relations.</p>
+                        </li>
+                        <li class="mb-6">
+                            <h3 style="margin: 0 0 0.25rem 0; font-size: 1.25rem; font-weight: 600; color: #1e40af;">Maintenance Technician – Madison, WI</h3>
+                            <p style="margin: 0; color: #4b5563;">Maintain building systems, perform repairs and contribute to a safe, comfortable environment for residents.</p>
+                        </li>
+                        <li>
+                            <h3 style="margin: 0 0 0.25rem 0; font-size: 1.25rem; font-weight: 600; color: #1e40af;">Owner's Representative (Construction) – Chicago, IL</h3>
+                            <p style="margin: 0; color: #4b5563;">Represent ownership interests in construction projects, collaborating with contractors and consultants to deliver high‑quality developments.</p>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;">Ready to apply? Send your résumé and cover letter to <a href="mailto:careers@pmdchicago.com" style="color: #1e40af; text-decoration: underline;">careers@pmdchicago.com</a> or visit our contact page.</p>
+                </div>
+                <div>
+                    <img src="assets/img/careers.png" alt="Illustration representing opportunity and growth" class="img-responsive">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Prairie Management &amp; Development, Inc. All rights reserved.</p>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Script to toggle mobile menu -->
+    <script>
+        const toggleButton = document.querySelector('.mobile-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (toggleButton) {
+            toggleButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('show');
+            });
+        }
+    </script>
+</body>
+</html>

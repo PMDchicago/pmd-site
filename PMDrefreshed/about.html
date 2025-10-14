@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn about Prairie Management &amp; Development, Inc., a mission-driven real estate development and property management company based in Chicago, Illinois.">
+    <title>About Us – Prairie Management &amp; Development, Inc.</title>
+    <!-- Local stylesheet for consistent styling -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Fixed navigation bar for interior pages -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <span class="logo">Prairie Management &amp; Development, Inc.</span>
+            <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect y="5" width="24" height="2"></rect>
+                    <rect y="11" width="24" height="2"></rect>
+                    <rect y="17" width="24" height="2"></rect>
+                </svg>
+            </button>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile menu for small screens -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    <!-- Main content -->
+    <main class="pt-nav">
+        <section class="section">
+            <div class="container grid grid-2">
+                <div>
+                    <h1>About Us</h1>
+                    <p>Prairie Management &amp; Development, Inc. (PMD) is a mission-driven real estate development and property management company headquartered in Chicago, Illinois. Our company has over 40 years of industry experience and is dedicated to creating clean, safe and affordable housing throughout the Midwest. In addition to residential communities, we develop and operate commercial and self‑storage facilities.</p>
+                    <p>Guided by integrity and transparency, PMD strives to build thriving communities that enrich the lives of our residents, provide rewarding opportunities for our employees and deliver value for our investors. Every project is approached with a long-term vision, ensuring that our properties foster a sense of belonging and contribute positively to their neighborhoods.</p>
+                    <p>Our leadership team brings together decades of experience across development, property management and community engagement. We value collaboration and continuous improvement and remain focused on our mission of delivering exceptional experiences for those we serve.</p>
+                    <a href="careers.html" class="button primary mt-6">Join Our Team</a>
+                </div>
+                <div>
+                    <img src="assets/img/about.png" alt="Illustration representing collaboration and community" class="img-responsive">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Prairie Management &amp; Development, Inc. All rights reserved.</p>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Script to toggle mobile menu -->
+    <script>
+        const toggleButton = document.querySelector('.mobile-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (toggleButton) {
+            toggleButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('show');
+            });
+        }
+    </script>
+</body>
+</html>
