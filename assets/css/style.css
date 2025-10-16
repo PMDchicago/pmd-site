@@ -35,16 +35,117 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Utility classes */
+/*
+ * Container
+ * Replicates Tailwind's responsive paddings (px-4 sm:px-6 lg:px-8)
+ * Provides a centered layout with side padding that increases
+ * at larger breakpoints. This helps give content breathing
+ * room on the left and right sides of the page.
+ */
 .container {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
+  padding-left: 1rem; /* px-4 */
   padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem; /* sm:px-6 */
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem; /* lg:px-8 */
+    padding-right: 2rem;
+  }
+}
+
+/* Basic color classes to mirror Tailwind defaults used in our HTML */
+.bg-white {
+  background-color: #ffffff;
+}
+.bg-gray-900 {
+  background-color: #111827;
+}
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+.text-gray-900 {
+  color: #1f2937;
+}
+.text-gray-700 {
+  color: #374151;
+}
+.text-gray-600 {
+  color: #4b5563;
+}
+.text-blue-700 {
+  color: #1d4ed8;
+}
+.text-blue-800 {
+  color: #1e40af;
+}
+.text-white {
+  color: #ffffff;
 }
 
 .text-center {
   text-align: center;
+}
+
+/* Text decoration helpers */
+.underline {
+  text-decoration: underline;
+}
+
+/* Typography sizes and weights
+ * These utilities mimic a small subset of Tailwind's typography
+ * classes used in our HTML. They provide sensible defaults for
+ * headings and paragraphs without relying on the full Tailwind
+ * framework. Feel free to expand this list if additional sizes
+ * are needed.
+ */
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+/* Small text size utility */
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+/* Flex alignment helpers */
+.items-start {
+  align-items: flex-start;
 }
 
 .mt-8 { margin-top: 2rem; }
@@ -53,6 +154,11 @@ h1, h2, h3, h4, h5, h6 {
 .mb-8 { margin-bottom: 2rem; }
 .mb-6 { margin-bottom: 1.5rem; }
 .mb-4 { margin-bottom: 1rem; }
+
+/* Padding utility for page bottom spacing */
+.pb-16 {
+  padding-bottom: 4rem;
+}
 
 /* Navigation styles */
 .nav-hero {
@@ -411,6 +517,37 @@ form .form-group {
   margin-bottom: 1rem;
 }
 
+/* ZipRecruiter jobs widget styles */
+.jobs-widget {
+  margin-top: 1rem;
+}
+
+.jobs-widget table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.jobs-widget th,
+.jobs-widget td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.jobs-widget th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+#jobs_widget_link_split {
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
 form label {
   display: block;
   margin-bottom: 0.5rem;
@@ -463,4 +600,25 @@ address {
   height: auto;
   border-radius: 0.375rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Additional utility classes for sizing and decoration
+ * These mirror some of the Tailwind classes used in the HTML,
+ * allowing our pages to work without the Tailwind CDN. They
+ * ensure images and elements can be sized consistently.
+ */
+.rounded {
+  border-radius: 0.375rem;
+}
+
+.shadow {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-auto {
+  height: auto;
 }
