@@ -18,3 +18,4 @@ The site is organised into a handful of HTML pages with a small collection of st
 │       ├── hero-real.jpg # Real Chicago skyline used on the home page
 │       ├── about.png     # Illustration for the About page
 │       └── careers.png   # Illustration for the Careers page
+└── README.md         # This document
