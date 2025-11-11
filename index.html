@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF‑8">
-    <meta name="viewport" content="width=device‑width, initial‑scale=1">
-    <meta name="description" content="Prairie Management & Development, Inc. is a mission‑driven real estate development and management company based in Chicago. We are deeply committed to our residents, employees and investors.">
-    <title>Prairie Management &amp; Development, Inc. – Home</title>
-    <!-- Local stylesheet for offline support -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prairie Management & Development, Inc. is a mission-driven real estate development and management company based in Chicago. We are deeply committed to our residents, employees and investors.">
+  <title>Prairie Management &amp; Development, Inc. – Home</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-    <!-- Overlay navigation on home page -->
-    <nav class="nav-hero">
-        <span class="logo">Prairie Management &amp; Development, Inc.</span>
-        <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <rect y="5" width="24" height="2"></rect>
-                <rect y="11" width="24" height="2"></rect>
-                <rect y="17" width="24" height="2"></rect>
-            </svg>
-        </button>
-        <div class="menu">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="careers.html">Careers</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-    </nav>
-    <!-- Mobile menu for home page -->
-    <div class="mobile-menu">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html">Contact Us</a>
+  <!-- Overlay navigation on home page -->
+  <nav class="nav-hero">
+    <div class="logo-wrapper">
+      <a href="index.html">
+        <img src="assets/img/logo-nav.png" alt="Prairie Management & Development, Inc.">
+        <span class="logo-text">Prairie Management &amp; Development, Inc.</span>
+      </a>
     </div>
-    <!-- Hero Section -->
-    <!-- Update hero background to a real Chicago skyline photo -->
-    <header class="hero" style="background-image: url('assets/img/hero-real.jpg');">
-        <div class="hero-content">
-            <h1 class="hero-title">A Mission‑Driven Real Estate Development &amp; Management Company</h1>
-            <p class="hero-subtitle">We are deeply committed to our residents, our employees and our investors.</p>
-            <a href="about.html" class="hero-button">Learn More</a>
-        </div>
-    </header>
-    <!-- Mission Section -->
-    <section class="section center">
-        <h2>Our Mission</h2>
-        <p>Prairie Management &amp; Development, Inc. creates thriving communities by delivering exceptional living experiences for residents and rewarding opportunities for employees and investors. With over 40 years of experience, we develop and manage properties with integrity, transparency and a focus on community.</p>
-        <div class="button-group">
-            <a href="about.html" class="button primary">About Us</a>
-            <a href="careers.html" class="button secondary">Careers</a>
-            <a href="contact.html" class="button secondary">Contact Us</a>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Prairie Management &amp; Development, Inc. All rights reserved.</p>
-            <div class="links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="careers.html">Careers</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </footer>
-    <!-- Script to toggle mobile menu -->
-    <script>
-        const toggleButton = document.querySelector('.mobile-toggle');
-        const mobileMenuEl = document.querySelector('.mobile-menu');
-        if (toggleButton) {
-            toggleButton.addEventListener('click', () => {
-                mobileMenuEl.classList.toggle('show');
-            });
-        }
-    </script>
+    <button class="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <rect y="5" width="24" height="2"></rect>
+        <rect y="11" width="24" height="2"></rect>
+        <rect y="17" width="24" height="2"></rect>
+      </svg>
+    </button>
+    <div class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </nav>
+  <!-- Mobile menu for home page -->
+  <div class="mobile-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="careers.html">Careers</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+  <!-- Hero Section -->
+  <header class="hero" style="background-image: url('assets/img/hero-real.jpg');">
+    <div class="hero-content">
+      <h1 class="hero-title">A Mission-Driven Real Estate Development &amp; Management Company</h1>
+      <p class="hero-subtitle">We are deeply committed to our residents, our employees and our investors.</p>
+      <a href="about.html" class="hero-button">Learn More</a>
+    </div>
+  </header>
+  <!-- Mission Section -->
+  <section class="section center">
+    <h2>Our Mission</h2>
+    <p>Prairie Management &amp; Development, Inc. creates thriving communities by delivering exceptional living experiences for residents and rewarding opportunities for employees and investors. With over 40 years of experience, we develop and manage properties with integrity, transparency and a focus on community.</p>
+    <div class="button-group">
+      <a href="about.html" class="button primary">About Us</a>
+      <a href="careers.html" class="button secondary">Careers</a>
+      <a href="contact.html" class="button secondary">Contact Us</a>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Prairie Management &amp; Development, Inc. All rights reserved.</p>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const toggleButton = document.querySelector('.mobile-toggle');
+    const mobileMenuEl = document.querySelector('.mobile-menu');
+    if (toggleButton) {
+      toggleButton.addEventListener('click', () => {
+        mobileMenuEl.classList.toggle('show');
+      });
+    }
+  </script>
 </body>
 </html>

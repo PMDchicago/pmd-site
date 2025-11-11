@@ -1,0 +1,73 @@
+/* Custom overrides for logo size and hero brightness */
+
+/* Remove dark overlay from hero image to restore original brightness */
+.hero::before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/*
+ * Logo styling for the home page navigation
+ *
+ * The company logo graphic is displayed above the text
+ * within the navigation overlay on the home page. The image
+ * width scales with the viewport while maintaining the
+ * aspect ratio. The text sits below the image and uses a
+ * bold weight to improve legibility, especially on mobile
+ * screens.
+ */
+
+/* Position the logo wrapper elements in a vertical stack */
+.nav-hero .logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Style the logo graphic */
+.nav-hero .logo-wrapper img {
+  width: 5rem;
+  height: auto;
+  margin-bottom: 0.25rem;
+  /* Allow the hero image to show through the interior of the logo graphic */
+  opacity: 0.85;
+  mix-blend-mode: multiply;
+}
+
+/* Style the text underneath the logo graphic */
+.nav-hero .logo-wrapper .logo-text {
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.1;
+  /* Set the company name to a dark gray for better contrast on bright backgrounds */
+  color: #374151;
+}
+
+/* Increase the logo size on larger screens */
+@media (min-width: 640px) {
+  .nav-hero .logo-wrapper img {
+    width: 6rem;
+  }
+  .nav-hero .logo-wrapper .logo-text {
+    font-size: 0.875rem;
+  }
+}
+
+/*
+ * Override the default white navigation text colour on the hero overlay.
+ * Without this, the links and site name appear white and are hard to read on
+ * bright backgrounds. This sets a dark gray colour for both the overall
+ * navigation bar and its links, and adds a slightly darker colour on hover.
+ */
+.nav-hero {
+  color: #374151;
+}
+
+.nav-hero .menu a {
+  color: #374151;
+}
+
+.nav-hero .menu a:hover {
+  color: #1f2937;
+}
