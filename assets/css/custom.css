@@ -102,52 +102,63 @@
 /*
  * Mobile menu positioning and styling
  *
- * The default `.mobile-menu` in style.css spans the full width of the
- * page and left-aligns the links. On mobile we want the menu to
- * appear directly beneath the hamburger button on the right side of
- * the screen. We therefore absolutely position the menu container,
- * align its contents to the right, and convert the layout to a
- * vertical flexbox. The `.show` class is used by the JavaScript to
- * toggle visibility.
+ * There are two types of navigation in our site: the overlay nav on the
+ * home page (`.nav-hero`) and the fixed nav used on interior pages
+ * (`.nav`). Each has a corresponding mobile menu that appears when
+ * the hamburger button is toggled. We style them separately to
+ * achieve the desired behaviour.
  */
-.mobile-menu {
+
+/*
+ * Base mobile menu styles (interior pages). We right-align the text
+ * and keep the container relative to the page. The `.show` class
+ * toggles the display from none to block.  Note: padding and
+ * background colour remain defined in style.css; we only adjust
+ * alignment here.
+ */
+.nav .mobile-menu {
+  text-align: right;
+}
+
+.nav .mobile-menu a {
+  text-align: right;
+  color: #374151;
+}
+
+/* Overlay mobile menu (home page) – position under the hamburger on the right */
+.nav-hero + .mobile-menu {
+  /* Hidden by default; toggled via the `.show` class */
   display: none;
   position: absolute;
   right: 1rem;
-  /* Place the menu just below the nav bar (approximately the height of
-   * the overlay nav plus its padding). If your nav height changes,
-   * adjust this value accordingly. */
   top: 4rem;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(4px);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
-  display: flex;
   flex-direction: column;
   align-items: flex-end;
   min-width: 10rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-menu a {
+.nav-hero + .mobile-menu a {
   display: block;
-  padding: 0.5rem 0;
   width: 100%;
   text-align: right;
   color: #374151;
 }
 
-.mobile-menu a:hover {
-  background-color: rgba(243, 244, 246, 0.5); /* light grey on hover */
+.nav-hero + .mobile-menu a:hover {
+  background-color: rgba(243, 244, 246, 0.5);
 }
 
-.mobile-menu a.active {
+.nav-hero + .mobile-menu a.active {
   color: #1d4ed8;
   font-weight: 500;
 }
 
-/* When the menu is toggled open, the `.show` class is added */
-.mobile-menu.show {
+.nav-hero + .mobile-menu.show {
   display: flex;
 }
 
