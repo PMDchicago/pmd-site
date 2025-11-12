@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Prairie Management & Development, Inc. is a mission-driven real estate development and management company based in Chicago. We are deeply committed to our residents, employees and investors.">
+  <meta name="description" content="Prairie Management &amp; Development, Inc. is a mission-driven real estate development and management company based in Chicago. We are deeply committed to our residents, employees and investors.">
   <title>Prairie Management &amp; Development, Inc. – Home</title>
+  <!-- Base styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Custom overrides for navigation and hero -->
   <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
@@ -13,7 +15,7 @@
   <nav class="nav-hero">
     <div class="logo-wrapper">
       <a href="index.html">
-        <img src="assets/img/logo-nav.png" alt="Prairie Management & Development, Inc.">
+        <img src="assets/img/logo-nav.png" alt="Prairie Management &amp; Development, Inc.">
         <span class="logo-text">Prairie Management &amp; Development, Inc.</span>
       </a>
     </div>
@@ -69,6 +71,8 @@
     </div>
   </footer>
   <script>
+    // Toggle navigation on small screens. The `.mobile-toggle` button adds or
+    // removes the `.show` class from the mobile menu to control its visibility.
     const toggleButton = document.querySelector('.mobile-toggle');
     const mobileMenuEl = document.querySelector('.mobile-menu');
     if (toggleButton) {

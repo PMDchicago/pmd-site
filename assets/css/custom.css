@@ -125,9 +125,26 @@
   color: #374151;
 }
 
-/* Overlay mobile menu (home page) – position under the hamburger on the right */
+/* Overlay mobile menu (home page) – position under the hamburger on the right
+ *
+ * The mobile menu for the home page is hidden by default via the
+ * `hidden` utility class from Tailwind.  We set the display to
+ * `flex` here so that removing the `hidden` class via JavaScript
+ * reveals the menu.  The menu is positioned absolutely relative to
+ * the top right of the viewport, given a light background with
+ * transparency and blur, and right‑aligned links.
+ */
+/*
+ * Overlay mobile menu (home page) – default hidden state and styling.
+ *
+ * The `.nav-hero` overlay navigation uses a separate mobile menu that is
+ * positioned under the hamburger icon.  The menu is hidden by default
+ * and revealed when the `.show` class is added via JavaScript.  We
+ * apply a light backdrop and blur to help the menu stand out against
+ * the underlying hero image.  All links are right aligned.
+ */
 .nav-hero + .mobile-menu {
-  /* Hidden by default; toggled via the `.show` class */
+  /* hidden by default; shown via `.show` */
   display: none;
   position: absolute;
   right: 1rem;
@@ -140,6 +157,11 @@
   align-items: flex-end;
   min-width: 10rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Show the mobile menu when the `.show` class is present */
+.nav-hero + .mobile-menu.show {
+  display: flex;
 }
 
 .nav-hero + .mobile-menu a {
@@ -158,10 +180,6 @@
   font-weight: 500;
 }
 
-.nav-hero + .mobile-menu.show {
-  display: flex;
-}
-
 /* Increase the logo size on larger screens */
 @media (min-width: 640px) {
   .nav-hero .logo-wrapper img {
@@ -170,4 +188,50 @@
   .nav-hero .logo-wrapper .logo-text {
     font-size: 0.875rem;
   }
+}
+
+/*
+ * Logo styling for interior pages
+ *
+ * On interior pages the navigation bar uses the `.nav` class. We want
+ * to reuse the same logo graphic and text treatment as the home page
+ * while keeping the navigation compact. We therefore stack the
+ * graphic above the text in a column and adjust the image size to
+ * fit within the fixed nav height.
+ */
+.nav .logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+}
+
+.nav .logo-wrapper img {
+  width: 3.5rem;
+  height: auto;
+  margin-bottom: 0.25rem;
+}
+
+.nav .logo-wrapper .logo-text {
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #374151;
+}
+
+/* Override nav link colours on interior pages for better contrast.  The base
+ * stylesheet defines `.nav .menu a` with a very dark tone (#1f2937).
+ * Here we prefer a slightly softer dark grey (#374151) to match the
+ * colour of the logo text and ensure readability against the light
+ * background.  Hover and active states remain blue to indicate
+ * interactivity and current page selection. */
+.nav .menu a {
+  color: #374151;
+}
+.nav .menu a:hover {
+  color: #1d4ed8;
+}
+.nav .menu a.active {
+  color: #1d4ed8;
+  font-weight: 500;
 }
