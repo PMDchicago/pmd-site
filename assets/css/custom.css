@@ -99,12 +99,56 @@
   }
 }
 
-/* Adjust mobile menu background to a solid light tint for clarity */
+/*
+ * Mobile menu positioning and styling
+ *
+ * The default `.mobile-menu` in style.css spans the full width of the
+ * page and left-aligns the links. On mobile we want the menu to
+ * appear directly beneath the hamburger button on the right side of
+ * the screen. We therefore absolutely position the menu container,
+ * align its contents to the right, and convert the layout to a
+ * vertical flexbox. The `.show` class is used by the JavaScript to
+ * toggle visibility.
+ */
 .mobile-menu {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  /* Place the menu just below the nav bar (approximately the height of
+   * the overlay nav plus its padding). If your nav height changes,
+   * adjust this value accordingly. */
+  top: 4rem;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(4px);
   border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 10rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+  display: block;
   padding: 0.5rem 0;
+  width: 100%;
+  text-align: right;
+  color: #374151;
+}
+
+.mobile-menu a:hover {
+  background-color: rgba(243, 244, 246, 0.5); /* light grey on hover */
+}
+
+.mobile-menu a.active {
+  color: #1d4ed8;
+  font-weight: 500;
+}
+
+/* When the menu is toggled open, the `.show` class is added */
+.mobile-menu.show {
+  display: flex;
 }
 
 /* Increase the logo size on larger screens */
