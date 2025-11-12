@@ -30,18 +30,81 @@
   width: 5rem;
   height: auto;
   margin-bottom: 0.25rem;
-  /* Allow the hero image to show through the interior of the logo graphic */
-  opacity: 0.85;
-  mix-blend-mode: multiply;
 }
 
+/* Style the text underneath the logo graphic */
 /* Style the text underneath the logo graphic */
 .nav-hero .logo-wrapper .logo-text {
   font-size: 0.75rem;
   font-weight: bold;
   line-height: 1.1;
-  /* Set the company name to a dark gray for better contrast on bright backgrounds */
+  /* Override the default white color set on .nav-hero so the text is readable */
+  color: #374151; /* dark grey for better contrast */
+}
+
+/*
+ * Navigation overlay refinements
+ *
+ * The default `.nav-hero` overlay positions the logo and menu directly
+ * over the hero image, which can cause readability issues when the
+ * underlying image has high contrast.  To improve legibility we add
+ * subtle backgrounds behind the logo block and the navigation links.
+ * These backgrounds use semi-transparent white and gradient fades so
+ * they blend into the hero image while providing enough contrast for
+ * the dark text defined below.  We also continue to set the text
+ * colour to a dark grey for maximum contrast against the light
+ * backgrounds.
+ */
+
+/* Darken nav text for readability */
+.nav-hero {
   color: #374151;
+}
+.nav-hero .menu a,
+.nav-hero .menu a.active,
+.nav-hero .menu a:hover {
+  color: #374151;
+}
+.nav-hero .mobile-toggle {
+  color: #374151;
+}
+
+/*
+ * Semi-transparent backgrounds for the logo and menu containers.
+ *
+ * To improve legibility of the logo and navigation links on top of
+ * busy hero images, we apply a light coloured background behind the
+ * logo block and the menu. The background uses a subtle gradient
+ * that fades into transparency so the underlying image remains
+ * visible at the edges. A blur via `backdrop-filter` further
+ * integrates the overlay with the hero image. The same padding and
+ * border-radius are applied to both containers for a cohesive look.
+ */
+
+.nav-hero .logo-wrapper,
+.nav-hero .menu {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  /* A light gradient background that fades into the hero image */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.0) 100%);
+  backdrop-filter: blur(4px);
+}
+
+/* On large screens the menu sits on the right side, so flip the gradient
+ * direction to fade leftwards.  We use a media query to override the
+ * generic gradient above for `.menu` only. */
+@media (min-width: 640px) {
+  .nav-hero .menu {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.0) 100%);
+  }
+}
+
+/* Adjust mobile menu background to a solid light tint for clarity */
+.mobile-menu {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 /* Increase the logo size on larger screens */
@@ -52,22 +115,4 @@
   .nav-hero .logo-wrapper .logo-text {
     font-size: 0.875rem;
   }
-}
-
-/*
- * Override the default white navigation text colour on the hero overlay.
- * Without this, the links and site name appear white and are hard to read on
- * bright backgrounds. This sets a dark gray colour for both the overall
- * navigation bar and its links, and adds a slightly darker colour on hover.
- */
-.nav-hero {
-  color: #374151;
-}
-
-.nav-hero .menu a {
-  color: #374151;
-}
-
-.nav-hero .menu a:hover {
-  color: #1f2937;
 }
